@@ -35,16 +35,16 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>Bot Uptime:</b> {currentTime}\n' \
-            f'<b>Start Time:</b> {current}\n' \
-            f'<b>Total Disk Space:</b> {total}\n' \
-            f'<b>Used:</b> {used}  ' \
-            f'<b>Free:</b> {free}\n\n' \
-            f'📊Data Usage📊\n<b>Upload:</b> {sent}\n' \
-            f'<b>Download:</b> {recv}\n\n' \
-            f'<b>CPU:</b> {cpuUsage}%\n' \
-            f'<b>RAM:</b> {memory}%\n' \
-            f'<b>DISK:</b> {disk}%'
+    stats = f'<b>🖥️Bot Uptime:</b> {currentTime}\n' \
+            f'<b>🔶Start Time:</b> {current}\n' \
+            f'<b>💽Total Disk Space:</b> {total}\n' \
+            f'<b>📀Used:</b> {used}  ' \
+            f'<b>💿Free:</b> {free}\n\n' \
+            f'📊 Data Usage 📊\n<b>📤Upload:</b> {sent}\n' \
+            f'<b>📥Download:</b> {recv}\n\n' \
+            f'<b>🚦CPU:</b> {cpuUsage}%\n' \
+            f'<b>📟RAM:</b> {memory}%\n' \
+            f'<b>💾DISK:</b> {disk}%\n<b>©️ Powered By :</b> it @Anime_Troop'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
