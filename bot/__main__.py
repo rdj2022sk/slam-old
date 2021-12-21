@@ -44,7 +44,7 @@ def stats(update, context):
             f'<b>📥Download:</b> {recv}\n\n' \
             f'<b>🚦CPU:</b> {cpuUsage}%\n' \
             f'<b>📟RAM:</b> {memory}%\n' \
-            f'<b>💾DISK:</b> {disk}%\n<b>©️ Powered By :</b> it @Anime_Troop'
+            f'<b>💾DISK:</b> {disk}%\n<b>©️ Powered By :</b> @Kai_8_4'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -54,8 +54,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/breakdowns/slam-mirrorbot")
-    buttons.buildbutton("Support Group", "https://t.me/SlamMirrorSupport")
+    buttons.buildbutton("Repo", "https://github.com/DragonPower84/slam-old")
+    buttons.buildbutton("Support Group", "https://t.me/ConKai84_Bot")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
